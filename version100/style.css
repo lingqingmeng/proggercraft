@@ -1,0 +1,144 @@
+.chart {
+    background: #eee;
+    padding: 1px;
+}
+
+.chart div {
+  width: 0;
+  transition: all 1s ease-out;
+  -moz-transition: all 1s ease-out;
+  -webkit-transition: all 1s ease-out;
+}
+
+.chart div {
+  font: 20px sans-serif;
+  background-color: steelblue;
+  text-align: left;
+  padding: 1px;
+  margin: 1px;
+  color: white;
+  box-shadow: 2px 2px 2px #666;
+}
+
+
+#block_container
+{
+    text-align:center;
+}
+#block1, #block2
+{
+    display:inline;
+}
+
+
+
+[ng\:cloak],[ng-cloak],   
+[data-ng-cloak],   
+[x-ng-cloak],   
+.ng-cloak,   
+.x-ng-cloak {  
+  display: none !important;  
+}  
+
+.important {
+    color: red;
+}
+
+
+
+.centerWidth{
+  display: inline-block;
+
+}
+
+.hrefclass {
+    color: lightblue !important;
+    text-decoration: underline;
+    font-weight: bold;
+
+}
+
+
+
+.fadein{
+display:none;
+font-size:20px;
+}
+
+
+
+
+.closebutton {
+   line-height: 12px;
+   width: 10px;
+   font-size: 8pt;
+   font-family: tahoma;
+   margin-top: 1px;
+   margin-right: 2px;
+   position:absolute;
+   top:0;
+   right:0;
+}
+
+/* Styles for our labels for right click permanent tooltip */
+.label {
+  font-family: arial, helvetica, 'sans-serif';
+  font-size: 24px;
+  text-anchor: middle;
+  alignment-baseline: text-before-edge;
+}
+
+.canvas {
+  position: relative;
+}
+
+
+
+/* spanish resize drag windows start */
+
+
+/* spanish resize drag windows end */
+
+/* svg with html windows drag drop start */
+#chart {
+      height: 100%;
+      text-align: center;     
+      padding: 1rem;
+}
+.col {
+   display: inline-block;
+   width: 200px;
+   vertical-align: top;
+}
+ul {
+  margin: 0; padding: 0;
+}
+li {
+  margin: 0 0 .3rem 0; 
+  padding: .3rem; 
+  list-style: none;
+  background-color: #fff;
+  background-color: rgba(255,255,255,.8);
+  font: 1.8rem/1 arial, helvetica, sans-serif;
+  border: 1px #7f7f7f solid;
+}
+li.ui-draggable {
+  cursor: move;
+}
+li.ui-state-disabled {
+  cursor: not-allowed;
+  opacity: .5;
+}
+rect { 
+  stroke: #7f7f7f; 
+  stroke-width: 1
+}
+text {
+  font-family: arial, helvetica, sans-serif;
+  font-size: 24px;
+  fill: #eee;
+}
+.color1 { fill: #1f77b4; }
+.color2 { fill: #2ca02c; }
+.color3 { fill: #9467bd; }
+/* svg with html windows drag drop end */

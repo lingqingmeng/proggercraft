@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<!-- define angular app -->
+<html ng-app="dvApp">
+
+<head>
+  <!--link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet"-->
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link href="lib/tipsy.css" rel="stylesheet" type="text/css" />
+
+  <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+  <script src="http://codeorigin.jquery.com/jquery-1.10.2.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.5/angular-resource.js"></script>
+  <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.11.2.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore.js"></script>
+  <script src="http://codeorigin.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+  <script src="directives/myGame.js"></script>
+  <script src="directives/myTutorial.js"></script>
+  <script type="text/javascript" src="lib/jquery.tipsy.js"></script>
+  <script src="script.js"></script>
+  <script src="lib/moment.js"></script>
+  <script src="lib/angular-moment.js"></script>
+</head>
+
+
+<body>
+    <!-- define login controller -->
+    <div ng-controller="loginController">
+          <script type="text/ng-template" id="modal.html">
+              <div class="modal-header">
+                  <h3>Enter Username and Password</h3>
+              </div>
+              <form ng-submit="submit()">
+                <div class="modal-body">
+                  <label>User name</label>
+                  <input type="text" ng-model="user.user" />
+                  <label>Password</label>
+                  <input type="password" ng-model="user.password" />
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+                    <input type="submit" class="btn primary-btn" value="Submit" />
+                </div>
+              </form>
+          </script>
+
+          <button ng-show="!user.isLoggedIn" class="btn" ng-click="logMeIn()">Log In</button>
+          <button ng-show="user.isLoggedIn" class="btn" ng-click="logMeOut()">Log Out</button>
+          <div ng-show="selected">Selection from a modal: {{ selected }}</div>
+    </div>
+
+  <!-- define main controller -->
+  <div ng-controller="mainController">
+    <nav class="navbar navbar-static" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Progger Craft</a>
+        </div>
+        <br>
+        <h2><div id="block1"> Welcome </div><div id="block2" ng-show="eventMessage.isLoggedIn"> {{eventMessage.user}}</div><div ng-show="cfg.debugMode" style='font-size: 16px'>Debug mode: ON</div></h2>
+        <ul class="nav navbar-nav">
+          <li ng-class="{ active: isActive('/play')}"><a href="#play"> Play</a></li>
+          <li ng-class="{ active: isActive('/product')}"><a href="#product"> Product</a></li>
+          <li ng-class="{ active: isActive('/process')}"><a href="#process"> Process</a></li>
+        </ul>
+    </div>
+  </nav>
+
+
+  <div id="main" ng-show="eventMessage.isLoggedIn || cfg.debugMode">
+    <!-- content -->
+    <div ng-view></div>
+  </div>
+</div>
+</body>
+
+
+
+</html>

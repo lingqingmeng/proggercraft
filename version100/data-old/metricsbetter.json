@@ -1,0 +1,55 @@
+{
+	"orgTitle": "SectionAQ1",
+	"rto": {
+		"averageTime": "section x row 1 col 2",
+		"mostSensitive": "section x row 2 col 2"
+	},
+	"rpo": "Section A Q 4",
+	"chartInfo" : [
+		{
+			"deliverableName": "opsdata",
+			"calendarSensitivity": {
+				"days": ["fri"],
+				"weeks": [],
+				"months": [],
+				"quarters": []
+			},
+			"mad": {"numberOf": 15, "units": "days"},
+			"cost": 50000
+		},
+		{
+			"deliverableName": "plan training",
+			"calendarSensitivity": {
+				"days": ["fri"],
+				"weeks": [],
+				"months": [],
+				"quarters": []
+			},
+			"mad": {"numberOf": 15, "units": "days"},
+			"cost": 50000
+		},
+		{
+			"deliverableName": "bcp data",
+			"calendarSensitivity": {
+				"days": ["fri"],
+				"weeks": [],
+				"months": [],
+				"quarters": []
+			},
+			"mad": {"numberOf": 30, "units": "days"},
+			"cost": 50000
+		},
+		{
+			"deliverableName": "plan training",
+			"calendarSensitivity": {
+				"days": ["thur", "fri"],
+				"weeks": [3],
+				"months": ["feb","apr"],
+				"quarters": [2]
+			},
+			"mad": {"numberOf": 0, "units": "seconds"},
+			"cost": 76544
+		}
+
+	]
+}
